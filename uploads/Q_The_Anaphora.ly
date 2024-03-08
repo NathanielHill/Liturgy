@@ -1,27 +1,23 @@
 \version "2.24.2"
-% automatically converted by musicxml2ly from /Users/nhill/GitHub/Liturgy/uploads/Q_The_Anaphora.mxl
-\pointAndClickOff
 
-\include "articulate.ly"
+\language "english" % Actually required
 
-%% additional definitions required by the score:
-\language "english"
-
+\paper {
+  #(set-paper-size "letter")
+}
 
 \header {
-  encodingsoftware =  "MuseScore 4.1.1"
-  encodingdate =  "2024-02-27"
-  source =
-  "/tmp/audiveris-2e93d2acfbe6aa24ebd07f44563f5477/score.pdf"
+  title = "The Anaphora"
+  subtitle = "Byzantine Tone 5"
+  tagline = ""
 }
 
-\layout {
-  \context {
-    \Score
-    skipBars = ##t
-  }
+global = {
+  \key f \major
 }
-SopranoPart =  \relative d' {
+
+soprano =  \relative d' {
+  \global
   \clef "treble" \numericTimeSignature\time 4/4 \key f \major \partial
   4  <d f>4 | % 1
   f4 (  e8 ) s8  <d f>4  g4 | % 2
@@ -81,7 +77,8 @@ SopranoPart =  \relative d' {
   d4  e4  f2
 }
 
-AltoPart =  \relative d' {
+alto =  \relative d' {
+  \global
   \clef "treble" \numericTimeSignature\time 4/4 \key f \major \partial
   4  d4 | % 1
   d4 (   cs8 ) s8  d4  e4
@@ -137,29 +134,32 @@ AltoPart =  \relative d' {
   g4  g4  a2
 }
 
-TenorPart =  \relative a {
+tenor =  \relative a {
+  \global
   \clef "bass" \numericTimeSignature\time 4/4 \key f \major \partial 4
   a4                  | % 1
   a2  a4  bf4         | % 2
-  a2. s2 -\<          | % 3
-  e'4 -\!  cs4 s4  e4 | % 4
-  f2  e2              | % 5
+  a2. s8 d8 -\<       | % 3
+  e4 -\! cs4 d4 e4    |
+  f2 e2               | % 4
   d2.                 \bar "||"
-  s4                  | % 6
+
   a2  a4  a4          | % 7
   a2 (  d2 )          | % 8
   d1                  \bar "||"
-  bf2  a4  a4         | \barNumberCheck #10
+
+  bf2  a4  a4         |
   g1  a2  g4          | % 11
   f4 (  a4  a4 )  a4  | % 12
   a2.                 \bar "||"
+
   <a a>2              | % 14
   <g bf>4 (  a4 )  a4 s4 | % 15
   a2. s4 | % 16
   a2 s4  g4 | % 17
   a2  cs4 s4 | % 18
   d2  d4 s4 | % 19
-  bf2  bf4 s4 | \barNumberCheck #20
+  bf2  bf4 s4 |
   g2  g4 s4 | % 21
   a2  a4 s4 | % 22
   a2. s4 | % 23
@@ -169,8 +169,9 @@ TenorPart =  \relative a {
   r2. s4*5 | % 28
   bf4  a4  a4 s4 | % 29
   a4 (  d4  cs4
-  -.  bf16  a16 ) s8 | \barNumberCheck #30
+  -.  bf16  a16 ) s8 |
   a1 \bar "||"
+
   \time 3/4  s2. | % 32
   R2. | % 33
   bf2 g1  bf4 | % 34
@@ -178,7 +179,7 @@ TenorPart =  \relative a {
   bf4  bf4  a2 | % 36
   <bf a>2 e,1  <bf' a>4  bf4 | % 38
   cs2 (  e2 ~ | % 39
-  c4  e4 | \barNumberCheck #40
+  c4  e4 |
   a,2 -\<  g4 | % 41
   f2 -\!  e4 ) | % 42
   d2. | % 43
@@ -188,18 +189,19 @@ TenorPart =  \relative a {
   r2  d4  d8  d8 | % 47
   bf'2  g4 (  a8  bf8 ) | % 48
   e,1  c2 (  d8  e8 ) | % 49
-  c'2 | \barNumberCheck #50
+  c'2 |
   R1*2 | % 52
   d4  bf4  d4  d2
 }
 
-BassPart =  \relative d {
+bass =  \relative d {
+  \global
   \clef "bass" \numericTimeSignature\time 4/4 \key f \major \partial 4
   d4 | % 1
   d4. (  a8 )  d4  d4 | % 2
-  d2. r8  d'8 | % 3
-  R1 s2 e,1 | % 5
-  r2. \bar "||"
+  d2. r8  s8 | % 3
+  r1 r1 | % 5
+  r1 \bar "||"
   d2  <a' g>4 | % 7
   f4  e4  d2 | % 8
   d1 \bar "||"
@@ -241,77 +243,106 @@ verseOne = \lyricmode {
   A mer __ cy of peace, a sac __ ri __ fice of praise.
   And __ with thy spir __ __ it.
   We lift them up on to __ the Lord.
+  It is meet __ and right, meet and right to wor __ ship
+  Fa __ ther, Son and Ho __ ly Spir __ it, the Tri __ ni __ ty,
+  One in es __ sence and un __ di __ vi __ __ ded.
+  Ho __ ly, Ho __ ly, Ho __ ly,
+  Lord __ __ of Sa __ ba __ oth,
+  heav __ en, heav __ en and earth __ __ __ are full of the __ glo __ ry.
+  Ho __ san __ na __ in the high __ est,
+  bless __ ed is He that __ __ com __ eth in the name __ of the Lord, __
+  Ho __ san __ na in __ __ __ the high __ est!
+  A __ men.
+  A __ __ __ __ __ __ __ __ __ men.
+  We __ __ praise __ __ __ Thee,
+  we praise __ Thee,
+  we bless __ __ Thee,
+  we give thanks un __ to Thee,
+  O Lord, and we pray un __ to Thee, __ __
+  O __ our __ God,
+  O our God,
+  our __ __ God.
 }
 
 \score {
   <<
     \new Staff
     <<
+      \set Staff.instrumentName = \markup \center-column { Soprano Alto }
       \context Staff <<
         \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "SopranoPart" {  \voiceOne \SopranoPart }
-        \context Voice = "AltoPart" {  \voiceTwo \AltoPart }
+        \context Voice = "soprano" {
+          \set midiInstrument = #"Soprano"
+          \voiceOne
+          \soprano
+        }
+        \context Voice = "alto" {
+          \set midiInstrument = #"Alto"
+          \voiceTwo
+          \alto
+        }
       >>
     >>
 
     \new Lyrics \with {
       \override VerticalAxisGroup.staff-affinity = #CENTER
-    } \lyricsto "SopranoPart" \verseOne
+    } \lyricsto "soprano" \verseOne
 
     \new Staff
     <<
+      \set Staff.instrumentName = \markup \center-column { Tenor Bass }
       \context Staff <<
         \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "TenorPart" {  \voiceOne \TenorPart }
-        \context Voice = "BassPart" {  \voiceTwo \BassPart }
+        \context Voice = "tenor" {
+          \set midiInstrument = #"Tenor"
+          \voiceOne
+          \tenor
+        }
+        \context Voice = "bass" {
+          \set midiInstrument = #"Bass"
+          \voiceTwo
+          \bass
+        }
       >>
     >>
 
   >>
+
   \layout {
     \context {
       \Score
+      \omit BarNumber % don't show measure numbers at the beginning of each line
+
+      tupletFullLength = ##t
+      proportionalNotationDuration = #(ly:make-moment 1/20)
       %\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
-      proportionalNotationDuration =
-      #(ly:make-moment 1/20)
+
       \override Score.SpacingSpanner.strict-note-spacing = ##t
       \override SpacingSpanner.uniform-stretching = ##t
       \override SpacingSpanner.strict-grace-spacing = ##t
-      tupletFullLength = ##t
       \override Beam.breakable = ##t
       \override Glissando.breakable = ##t
       \override TextSpanner.breakable = ##t
-      %\remove "Forbid_line_break_engraver" in the Voice context
+    }
+    \context {
+      \Staff
+      \remove "Instrument_name_engraver"
     }
   }
-}
 
-\score {
-  \unfoldRepeats \articulate {
-
-    \new Staff
-    <<
-      \set Staff.instrumentName = "Voice"
-      \set Staff.midiInstrument = "acoustic grand"
-
-      \context Staff <<
-        \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "SopranoPart" {  \voiceOne \SopranoPart }
-        \context Voice = "AltoPart" {  \voiceTwo \AltoPart }
-      >>
-    >>
-    \new Staff
-    <<
-      \set Staff.instrumentName = "Voice"
-      \set Staff.midiInstrument = "acoustic grand"
-
-      \context Staff <<
-        \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "TenorPart" {  \voiceOne \TenorPart }
-        \context Voice = "BassPart" {  \voiceTwo \BassPart }
-      >>
-    >>
-
+  \midi {
+    \tempo 4 = 100 % do we need this?
+    \context{
+      \Score
+      midiChannelMapping = #'instrument
+    }
+    \context {
+      \Staff
+      \remove "Staff_performer"
+    }
+    \context {
+      \Voice
+      \consists "Staff_performer"
+    }
   }
-  \midi {\tempo 4 = 100 }
 }
