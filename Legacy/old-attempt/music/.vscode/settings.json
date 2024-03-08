@@ -1,0 +1,54 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+          "name": "LilyPond -> LaTeX",
+          "tools": [
+            "lilypond-book",
+            "latexmk",
+          ]
+        }
+      ],
+      "latex-workshop.latex.tools": [
+        {
+          "name": "latexmk",
+          "command": "latexmk",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+          ],
+          "env": {}
+        },
+        {
+          "name": "pdflatex",
+          "command": "pdflatex",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+          ],
+          "env": {}
+        },
+        {
+          "name": "bibtex",
+          "command": "bibtex",
+          "args": [
+            "%DOCFILE%"
+          ],
+          "env": {}
+        },
+        {
+            "name": "lilypond-book",
+            "command": "lilypond-book",
+            "args": [
+              "--format=latex",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+      ]
+}
