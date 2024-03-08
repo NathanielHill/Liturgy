@@ -21,7 +21,7 @@
     skipBars = ##t
   }
 }
-PartPOneVoiceOne =  \relative d' {
+SopranoPart =  \relative d' {
   \clef "treble" \numericTimeSignature\time 4/4 \key f \major \partial
   4  <d f>4 | % 1
   f4 (  e8 ) s8  <d f>4  g4 | % 2
@@ -81,7 +81,7 @@ PartPOneVoiceOne =  \relative d' {
   d4  e4  f2
 }
 
-PartPOneVoiceTwo =  \relative d' {
+AltoPart =  \relative d' {
   \clef "treble" \numericTimeSignature\time 4/4 \key f \major \partial
   4  d4 | % 1
   d4 (   cs8 ) s8  d4  e4
@@ -130,14 +130,14 @@ PartPOneVoiceTwo =  \relative d' {
   f2  f4  f8  f8 | % 47
   f2  e4 (  f8  g8 )  a2
   (  c2  g4 ) | % 49
-  \numericTimeSignature\time 4/4   f2  d4
+  f2  d4
   d4 | \barNumberCheck #50
   e4 (  cs4 )  d4  e4 | % 51
   f4 ~  g4  f2 | % 52
   g4  g4  a2
 }
 
-PartPTwoVoiceOne =  \relative a {
+TenorPart =  \relative a {
   \clef "bass" \numericTimeSignature\time 4/4 \key f \major \partial 4
   a4                  | % 1
   a2  a4  bf4         | % 2
@@ -168,7 +168,7 @@ PartPTwoVoiceOne =  \relative a {
   r2. s4 | % 26
   r2. s4*5 | % 28
   bf4  a4  a4 s4 | % 29
-  \numericTimeSignature\time 4/4   a4 (  d4  cs4
+  a4 (  d4  cs4
   -.  bf16  a16 ) s8 | \barNumberCheck #30
   a1 \bar "||"
   \time 3/4  s2. | % 32
@@ -188,12 +188,12 @@ PartPTwoVoiceOne =  \relative a {
   r2  d4  d8  d8 | % 47
   bf'2  g4 (  a8  bf8 ) | % 48
   e,1  c2 (  d8  e8 ) | % 49
-  \numericTimeSignature\time 4/4   c'2 | \barNumberCheck #50
+  c'2 | \barNumberCheck #50
   R1*2 | % 52
   d4  bf4  d4  d2
 }
 
-PartPTwoVoiceTwo =  \relative d {
+BassPart =  \relative d {
   \clef "bass" \numericTimeSignature\time 4/4 \key f \major \partial 4
   d4 | % 1
   d4. (  a8 )  d4  d4 | % 2
@@ -241,37 +241,29 @@ verseOne = \lyricmode {
   A mer __ cy of peace, a sac __ ri __ fice of praise.
   And __ with thy spir __ __ it.
   We lift them up on to __ the Lord.
-
 }
 
-% The score definition
 \score {
   <<
     \new Staff
     <<
-      \set Staff.instrumentName = "Voice"
-      \set Staff.midiInstrument = "acoustic grand"
-
       \context Staff <<
         \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "PartPOneVoiceOne" {  \voiceOne \PartPOneVoiceOne }
-        \context Voice = "PartPOneVoiceTwo" {  \voiceTwo \PartPOneVoiceTwo }
+        \context Voice = "SopranoPart" {  \voiceOne \SopranoPart }
+        \context Voice = "AltoPart" {  \voiceTwo \AltoPart }
       >>
     >>
 
     \new Lyrics \with {
-      \override VerticalAxisGroup #'staff-affinity = #CENTER
-    } \lyricsto "PartPOneVoiceOne" \verseOne
+      \override VerticalAxisGroup.staff-affinity = #CENTER
+    } \lyricsto "SopranoPart" \verseOne
 
     \new Staff
     <<
-      \set Staff.instrumentName = "Voice"
-      \set Staff.midiInstrument = "acoustic grand"
-
       \context Staff <<
         \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "PartPTwoVoiceOne" {  \voiceOne \PartPTwoVoiceOne }
-        \context Voice = "PartPTwoVoiceTwo" {  \voiceTwo \PartPTwoVoiceTwo }
+        \context Voice = "TenorPart" {  \voiceOne \TenorPart }
+        \context Voice = "BassPart" {  \voiceTwo \BassPart }
       >>
     >>
 
@@ -304,8 +296,8 @@ verseOne = \lyricmode {
 
       \context Staff <<
         \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "PartPOneVoiceOne" {  \voiceOne \PartPOneVoiceOne }
-        \context Voice = "PartPOneVoiceTwo" {  \voiceTwo \PartPOneVoiceTwo }
+        \context Voice = "SopranoPart" {  \voiceOne \SopranoPart }
+        \context Voice = "AltoPart" {  \voiceTwo \AltoPart }
       >>
     >>
     \new Staff
@@ -315,8 +307,8 @@ verseOne = \lyricmode {
 
       \context Staff <<
         \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "PartPTwoVoiceOne" {  \voiceOne \PartPTwoVoiceOne }
-        \context Voice = "PartPTwoVoiceTwo" {  \voiceTwo \PartPTwoVoiceTwo }
+        \context Voice = "TenorPart" {  \voiceOne \TenorPart }
+        \context Voice = "BassPart" {  \voiceTwo \BassPart }
       >>
     >>
 
