@@ -14,27 +14,29 @@
 
 global = {
   \key f \major
+  \numericTimeSignature\time 4/4
 }
 
-soprano =  \relative d' {
+soprano =  \relative c' {
   \global
-  \clef "treble" \numericTimeSignature\time 4/4 \key f \major \partial
-  4  <d f>4 | % 1
-  f4 (  e8 ) s8  <d f>4  g4 | % 2
-  <f a>2. r8  f8 | % 3
-  g4 (  e4  f4 )  g4 | % 4
-  a2  g2 | % 5
-  <d f>2. \bar "||"
-  s4 | % 6
-  <d f>4. s8  g4  e4 | % 7
-  f4  g4  a4  bf4 | % 8
-  <f a>1 \bar "||"
-  \key c \major  d'2  c4  a4 | \barNumberCheck
-  #10
-  c1  <d, f>2  g4 | % 11
-  a4 (  g4 )  d4  f4 | % 12
-  e2. \bar "||"
-  \key f \major  <g f>2 | % 14
+  \partial 4    f4   | % 1
+  f4.(  e8) f4  g4   | % 2
+  a2.   r8  f8       | % 3
+  g4(   e4  f4) g4   | % 4
+  a2    g2           | % 5
+  f2.   s4           \bar "|." \break
+
+  f4.( a8)  g4  e4   | % 7
+  f4(  g4   a4  bf4) | % 8
+  a1                 \bar "|." \break
+
+  d2   c4  a4        |
+  \time 3/4
+  f2   g4            | % 11
+  a4(  g4)  f4       | % 12
+  e2.                \bar "|." \break
+
+  <g f>2 | % 14
   e4  f4  g4 s4 | % 15
   a2. s4 | % 16
   g2 -\<  e4 s4 | % 17
@@ -77,25 +79,26 @@ soprano =  \relative d' {
   d4  e4  f2
 }
 
-alto =  \relative d' {
+alto =  \relative c' {
   \global
-  \clef "treble" \numericTimeSignature\time 4/4 \key f \major \partial
-  4  d4 | % 1
-  d4 (   cs8 ) s8  d4  e4
-  | % 2
-  f2. s8  d8 | % 3
-  e4 (  cs4  d4 )  e4 -. | % 4
-  f2  e2 | % 5
-  d2. -. \bar "||"
-  s4 | % 6
-  d4. (  <f a>8 )  e4 -.  cs4
-  | % 7
-  d4 (  e4  f4  g4 ) s1 \bar "||"
-  \key c \major  d2  e4 -.  e4 s1.
-  d4 | % 11
-  d4 (  f4  e4 )  d4 | % 12
-  cs2. \bar "||"
-  \key f \major  <c d>2 -. | % 14
+  \partial 4    d4   | % 1
+  d4.( cs8) d4  e4   | % 2
+  f2.  r8   d8       | % 3
+  e4(  cs4  d4) e4   | % 4
+  f2   e2            | % 5
+  d2.  s4            \bar "|."
+
+  d4.( f8)  e4  cs4  | % 7
+  d4(  e4   f4  g4)  |
+  f1                 \bar "|."
+
+  d2   e4   e4       | % 11
+  \time 3/4
+  d2   d4
+  d8([ f8]  e4) d4   | % 12
+  cs2.               \bar "|."
+
+  <c d>2 -. | % 14
   cs4 (   d4 )  e4 s4 | % 15
   f2. s4 | % 16
   e2  cs4 s4 | % 17
@@ -134,26 +137,26 @@ alto =  \relative d' {
   g4  g4  a2
 }
 
-tenor =  \relative a {
+tenor =  \relative c' {
   \global
-  \clef "bass" \numericTimeSignature\time 4/4 \key f \major \partial 4
-  a4                  | % 1
-  a2  a4  bf4         | % 2
-  a2. s8 d8 -\<       | % 3
-  e4 -\! cs4 d4 e4    |
-  f2 e2               | % 4
-  d2.                 \bar "||"
+  \partial 4  a4     | % 1
+  a2  a4  bf4        | % 2
+  a2. r8  d8         | % 3
+  e4( cs4 d4) e4     |
+  f2  e2             | % 4
+  d2. s4             \bar "|."
 
-  a2  a4  a4          | % 7
-  a2 (  d2 )          | % 8
-  d1                  \bar "||"
+  a2  a4  a4         | % 7
+  a2( d2)            | % 8
+  d1                 \bar "|."
 
-  bf2  a4  a4         |
-  g1  a2  g4          | % 11
-  f4 (  a4  a4 )  a4  | % 12
-  a2.                 \bar "||"
+  bf2 a4  a4         |
+  \time 3/4
+  a2  g4             | % 11
+  f8( a8  a4) a4     | % 12
+  a2.                \bar "|."
 
-  <a a>2              | % 14
+  <a a>2             | % 14
   <g bf>4 (  a4 )  a4 s4 | % 15
   a2. s4 | % 16
   a2 s4  g4 | % 17
@@ -194,21 +197,25 @@ tenor =  \relative a {
   d4  bf4  d4  d2
 }
 
-bass =  \relative d {
+bass =  \relative c {
   \global
-  \clef "bass" \numericTimeSignature\time 4/4 \key f \major \partial 4
-  d4 | % 1
-  d4. (  a8 )  d4  d4 | % 2
-  d2. r8  s8 | % 3
-  r1 r1 | % 5
-  r1 \bar "||"
-  d2  <a' g>4 | % 7
-  f4  e4  d2 | % 8
-  d1 \bar "||"
-  g,2  a4  c4 s1  d2  bf4
-  | % 11
-  a4  cs4  d4 | % 12
-  a2. \bar "||"
+  \partial 4     d4  | % 1
+  d4.(  a8)  d4  d4  | % 2
+  d2. r8  s8         | % 3
+  r1                 |
+  r1                 | % 5
+  r1                 \bar "|."
+
+  d2  a'4 g4         | % 7
+  f4( e4  d2)        | % 8
+  d1                 \bar "|."
+
+  g,2  a4 c4         |
+  \time 3/4
+  d2  bf4            | % 11
+  a4( cs4)  d4       | % 12
+  a2.                \bar "|."
+
   <a e'>4 ( )  f'4 s4 | % 14
   g4 (  f4 )  e4 s4 | % 15
   d2. s4 | % 16
@@ -242,13 +249,13 @@ bass =  \relative d {
 verseOne = \lyricmode {
   A mer __ cy of peace, a sac __ ri __ fice of praise.
   And __ with thy spir __ __ it.
-  We lift them up on to __ the Lord.
+  We lift them up un __ to __ __ the Lord.
   It is meet __ and right, meet and right to wor __ ship
   Fa __ ther, Son and Ho __ ly Spir __ it, the Tri __ ni __ ty,
   One in es __ sence and un __ di __ vi __ __ ded.
   Ho __ ly, Ho __ ly, Ho __ ly,
   Lord __ __ of Sa __ ba __ oth,
-  heav __ en, heav __ en and earth __ __ __ are full of the __ glo __ ry.
+  heav __ en, heav __ en and earth __ __ __ are full of thy __ glo __ ry.
   Ho __ san __ na __ in the high __ est,
   bless __ ed is He that __ __ com __ eth in the name __ of the Lord, __
   Ho __ san __ na in __ __ __ the high __ est!
@@ -266,18 +273,22 @@ verseOne = \lyricmode {
 
 \score {
   <<
-    \new Staff
+    \new Staff \with {
+      \remove "Separating_line_group_engraver"
+    }
     <<
       \set Staff.instrumentName = \markup \center-column { Soprano Alto }
       \context Staff <<
-        \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "soprano" {
-          \set midiInstrument = #"Soprano"
+        \mergeDifferentlyDottedOn
+        \mergeDifferentlyHeadedOn
+        \clef "treble"
+        \context Voice = "Soprano" {
+          \set midiInstrument = "choir aahs"
           \voiceOne
           \soprano
         }
-        \context Voice = "alto" {
-          \set midiInstrument = #"Alto"
+        \context Voice = "Alto" {
+          \set midiInstrument = "choir aahs"
           \voiceTwo
           \alto
         }
@@ -286,21 +297,25 @@ verseOne = \lyricmode {
 
     \new Lyrics \with {
       \override VerticalAxisGroup.staff-affinity = #CENTER
-    } \lyricsto "soprano" \verseOne
+    } \lyricsto "Soprano" \verseOne
 
-    \new Staff
+    \new Staff \with {
+      \remove "Separating_line_group_engraver"
+    }
     <<
       \set Staff.instrumentName = \markup \center-column { Tenor Bass }
       \context Staff <<
-        \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
-        \context Voice = "tenor" {
-          \set midiInstrument = #"Tenor"
-          \voiceOne
+        \mergeDifferentlyDottedOn
+        \mergeDifferentlyHeadedOn
+        \clef bass
+        \context Voice = "Tenor" {
+          \set midiInstrument = "choir aahs"
+          \voiceThree
           \tenor
         }
-        \context Voice = "bass" {
-          \set midiInstrument = #"Bass"
-          \voiceTwo
+        \context Voice = "Bass" {
+          \set midiInstrument = "choir aahs"
+          \voiceFour
           \bass
         }
       >>
@@ -309,14 +324,16 @@ verseOne = \lyricmode {
   >>
 
   \layout {
+    indent = 0.0
+    ragged-right = ##t % this should become ragged-last once we split to add priest parts
     \context {
       \Score
       \omit BarNumber % don't show measure numbers at the beginning of each line
 
       tupletFullLength = ##t
-      proportionalNotationDuration = #(ly:make-moment 1/20)
-      %\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
+      proportionalNotationDuration = #(ly:make-moment 1/6)
 
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
       \override Score.SpacingSpanner.strict-note-spacing = ##t
       \override SpacingSpanner.uniform-stretching = ##t
       \override SpacingSpanner.strict-grace-spacing = ##t
