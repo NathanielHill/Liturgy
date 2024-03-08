@@ -248,24 +248,31 @@ bass =  \relative c {
 
 verseOne = \lyricmode {
   A mer __ cy of peace, a sac __ ri __ fice of praise.
+
   And __ with thy spir __ __ it.
+
   We lift them up un __ to __ __ the Lord.
+
   It is meet __ and right, meet and right to wor __ ship
   Fa __ ther, Son and Ho __ ly Spir __ it, the Tri __ ni __ ty,
   One in es __ sence and un __ di __ vi __ __ ded.
+
   Ho __ ly, Ho __ ly, Ho __ ly,
   Lord __ __ of Sa __ ba __ oth,
   heav __ en, heav __ en and earth __ __ __ are full of thy __ glo __ ry.
   Ho __ san __ na __ in the high __ est,
   bless __ ed is He that __ __ com __ eth in the name __ of the Lord, __
   Ho __ san __ na in __ __ __ the high __ est!
+
   A __ men.
+
   A __ __ __ __ __ __ __ __ __ men.
+
   We __ __ praise __ __ __ Thee,
   we praise __ Thee,
   we bless __ __ Thee,
-  we give thanks un __ to Thee,
-  O Lord, and we pray un __ to Thee, __ __
+  we give thanks un __ to Thee, O Lord,
+  and we pray un __ to Thee, __ __
   O __ our __ God,
   O our God,
   our __ __ God.
