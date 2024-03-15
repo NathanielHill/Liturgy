@@ -70,7 +70,7 @@ soprano =  \relative c' {
   \time 3/4
   d4   cs4  d4       | % 39
   <e   cs>2.(        |
-  <e   cs>4)  r4  a,4  |
+  <e   cs>4)  r4  a,4 |
   a2  g4             | % 41
   f2(  e4)           | % 42
   d2.                | % 43
@@ -222,6 +222,7 @@ tenor =  \relative c' {
   d1                 \bar "|."
 
   bf2 a4  a4         |
+
   \time 3/4
   a2  g4             | % 11
   f8( a8  a4) a4     | % 12
@@ -340,9 +341,9 @@ bass =  \relative c {
   \time 3/4
   bf4 a4 bf4         | % 39
   <a cs>2.(          |
-  <a c>4)  r4        |
-  a4  a2             | % 41
-  g4  f2( e4)        |
+  <a c>4)  r4  a4    |
+  a2  g4             | % 41
+  f2( e4)            |
   d2.                |
   d2.                |
 
@@ -356,7 +357,16 @@ bass =  \relative c {
   c2( d8 e8)         |
 
   \time 4/4
-  f2
+  f2  r2             |
+  r1                 |
+  r1                 |
+  bf4  bf4 a2        |
+  b2.  b4            |
+  a2(  <a a,>2)      |
+  <d,  a'>1           \bar "|." \break
+
+  d2(  g2)           |
+  d1                 \bar "|." \break
 }
 
 Lyrics = \lyricmode {
@@ -366,16 +376,20 @@ Lyrics = \lyricmode {
 
   We lift them up un __ to __ __ the Lord.
 
-  It is meet __ and right, meet and right to wor __ ship
-  Fa __ ther, Son and Ho __ ly Spir __ it, the Tri __ ni __ ty,
-  One in es __ sence and un -- di -- vi __ _ _ ded.
+  It is meet __ and right,
+  meet and right to wor __ ship
+  Fa __ ther, Son and Ho __ ly Spir __ it,
+  the Tri __ ni __ ty, One in es __ sence
+  and un -- di -- vi __ _ _ ded.
 
   Ho __ ly, Ho __ ly, Ho __ ly,
   Lord __ of Sa -- ba -- oth,
-  heav __ en, heav __ en and earth __ __ __ are full of thy __ glo __ ry. % Heaven doesn't align because Soprano has rest (heav __ en,)
+  heav __ en, heav __ en and earth __ __ __
+  are full of thy __ glo __ ry.
   Ho -- san -- na __ in the high __ est,
-  bless __ ed is He that __ __ com __ __ eth in the name __ of the Lord, __
-  Ho __ san __ na in __ __ __ the high __ est!
+  bless __ ed is He that __ __
+  c __ om -- eth in the name __ of the Lord, __
+  Ho __ san __ na in __ the hi __ gh -- est!
 
   A __ men.
 
