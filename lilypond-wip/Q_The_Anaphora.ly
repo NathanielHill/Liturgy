@@ -52,7 +52,7 @@ soprano =  \relative c' {
   a2(  g4)           | % 27
   f2.                | % 28
   e4   f4   g4       | % 29
-  
+
   \time 4/4
   a2(  g2)           |
   f1                 \bar "|." \break
@@ -66,7 +66,7 @@ soprano =  \relative c' {
   a4(  bf4  a4)  g4  | % 35
   f4   g4   a2 \fermata | % 36
   r1                 | % 37
-  
+
   \time 3/4
   d4   cs4  d4       | % 39
   <e   cs>2.(        |
@@ -164,7 +164,7 @@ alto =  \relative c' {
   d1                 \bar "|." \break
 
   \time 3/4
-  d2   e4            |  
+  d2   e4            |
   d2   d4            | % 33
   d2   d4            | % 34
 
@@ -322,11 +322,11 @@ bass =  \relative c {
   r2   s4            |
   r2   s4            |
   g4   f4  e4        | % 29
-  
+
   \time 4/4
   d1                 |
   d1                 \bar "|." \break
-  
+
   \time 3/4
   r2  s4             |
   r2  s4             |
@@ -356,7 +356,7 @@ bass =  \relative c {
   c2( d8 e8)         |
 
   \time 4/4
-  f2 
+  f2
 }
 
 Lyrics = \lyricmode {
