@@ -19,62 +19,62 @@ global = {
 
 soprano =  \relative c' {
   \global
-  \partial 4    f4   | % 1
-  f4.(  e8) f4  g4   | % 2
-  a2.   r8  f8       | % 3
-  g4(   e4  f4) g4   | % 4
-  a2    g2           | % 5
+  \partial 4    f4   |
+  f4.(  e8) f4  g4   |
+  a2.   r8  f8       |
+  g4(   e4  f4) g4   |
+  a2    g2           |
   f2.   s4           \bar "|." \break
 
-  f4.( a8)  g4  e4   | % 7
-  f4(  g4   a4  bf4) | % 8
+  f4.( a8)  g4  e4   |
+  f4(  g4   a4  bf4) |
   a1                 \bar "|." \break
 
   d2   c4  a4        |
   \time 3/4
-  f2   g4            | % 11
-  a4(  g4)  f4       | % 12
+  f2   g4            |
+  a4(  g4)  f4       |
   e2.                \bar "|." \break
 
-  g2   f4            | % 14
-  e4(  f4)   g4      | % 15
-  a2.                | % 16
-  g2   e4            | % 17
-  f2   g4            | % 18
+  g2   f4            |
+  e4(  f4)   g4      |
+  a2.                |
+  g2   e4            |
+  f2   g4            |
   a2   a4            |
   d2   d4            |
-  c2   bf4           | % 21
-  a2   g4            | % 22
-  f2(  e4)           | % 23
-  f2  f4             | % 24
-  g4   g4   g4       | % 25
-  a2   bf4           | % 26
-  a2(  g4)           | % 27
-  f2.                | % 28
-  e4   f4   g4       | % 29
+  c2   bf4           |
+  a2   g4            |
+  f2(  e4)           |
+  f2  f4             |
+  g4   g4   g4       |
+  a2   bf4           |
+  a2(  g4)           |
+  f2.                |
+  e4   f4   g4       |
 
   \time 4/4
   a2(  g2)           |
   f1                 \bar "|." \break
 
   \time 3/4
-  d2   e4            | % 32
-  f2   f4            | % 33
-  g2   g4            | % 34
+  d2   e4            |
+  f2   f4            |
+  g2   g4            |
 
   \time 4/4
-  a4(  bf4  a4)  g4  | % 35
-  f4   g4   a2 \fermata | % 36
-  r1                 | % 37
+  a4(  bf4  a4)  g4  |
+  f4   g4   a2 \fermata |
+  r1                 |
 
   \time 3/4
-  d4   cs4  d4       | % 39
+  d4   cs4  d4       |
   <e   cs>2.(        |
   <e   cs>4)  r4  a,4 |
-  a2  g4             | % 41
-  f2(  e4)           | % 42
-  d2.                | % 43
-  d2.                | % 44
+  a2  g4             |
+  f2(  e4)           |
+  d2.                |
+  d2.                |
 
   \time 4/4
   f4  f4  g4(  e4)   |
@@ -87,8 +87,8 @@ soprano =  \relative c' {
 
   \time 4/4
   a2  f4  f4         |
-  g4( e4) f4  g4     | % 51
-  a4( bf4 a2)        | % 52
+  g4( e4) f4  g4     |
+  a4( bf4 a2)        |
   d4 e4  f2          |
   cs4( d4 e4) d4     |
   d2( cs2)           |
@@ -124,40 +124,40 @@ soprano =  \relative c' {
 
 alto =  \relative c' {
   \global
-  \partial 4    d4   | % 1
-  d4.( cs8) d4  e4   | % 2
-  f2.  r8   d8       | % 3
-  e4(  cs4  d4) e4   | % 4
-  f2   e2            | % 5
+  \partial 4    d4   |
+  d4.( cs8) d4  e4   |
+  f2.  r8   d8       |
+  e4(  cs4  d4) e4   |
+  f2   e2            |
   d2.  s4            \bar "|."
 
-  d4.( f8)  e4  cs4  | % 7
+  d4.( f8)  e4  cs4  |
   d4(  e4   f4  g4)  |
   f1                 \bar "|."
 
-  d2   e4   e4       | % 11
+  d2   e4   e4       |
 
   \time 3/4
   d2   d4            |
-  d8([ f8]  e4) d4   | % 12
+  d8([ f8]  e4) d4   |
   cs2.               \bar "|."
 
-  cs2  d4            | % 14
-  cs4( d4)  e4       | % 15
-  f2.                | % 16
-  e2   cs4           | % 17
-  d2   e4            | % 18
-  f2   f4            | % 19
+  cs2  d4            |
+  cs4( d4)  e4       |
+  f2.                |
+  e2   cs4           |
+  d2   e4            |
+  f2   f4            |
   e2   e4            |
-  e2   e4            | % 21
-  e2   e4            | % 22
-  d2(  cs4)          | % 23
-  d2   d4            | % 24
+  e2   e4            |
+  e2   e4            |
+  d2(  cs4)          |
+  d2   d4            |
   e4   e4   e4       |
-  f2   g4            | % 26
-  f2(  e4)           | % 27
-  d2.                | % 28
-  cs4  d4   e4       | % 29
+  f2   g4            |
+  f2(  e4)           |
+  d2.                |
+  cs4  d4   e4       |
 
   \time 4/4
   f2(  e2)           |
@@ -165,36 +165,36 @@ alto =  \relative c' {
 
   \time 3/4
   d2   e4            |
-  d2   d4            | % 33
-  d2   d4            | % 34
+  d2   d4            |
+  d2   d4            |
 
   \time 4/4
-  d2.  d4            | % 35
+  d2.  d4            |
   d4   d4  cs2       |
   r1                 |
 
   \time 3/4
   g'4  g4  g4        |
   a2.                |
-  a4   r4  a4        | % 41
+  a4   r4  a4        |
   a2   g4            |
-  f2(  e4 )          | % 42
-  d2.                | % 43
+  f2(  e4 )          |
+  d2.                |
   d2.                |
 
   \time 4/4
-  d4  d4  e4(  cs4)  | % 45
-  d4  e4  f4(  g4)   | % 46
-  f2  f4  f8 \noBeam f8 | % 47
+  d4  d4  e4(  cs4)  |
+  d4  e4  f4(  g4)   |
+  f2  f4  f8 \noBeam f8 |
   f2  e4( f8  g8)    |
 
   \time 3/4
-  a2(  g4)           | % 49
+  a2(  g4)           |
 
   \time 4/4
   f2  d4  d4         |
-  e4( cs4)  d4  e4   | % 51
-  f4(  g4  f2)       | % 52
+  e4( cs4)  d4  e4   |
+  f4(  g4  f2)       |
   g4   g4  a2        |
   g4(  f4  g4)  gs4  |
   a2.( g4)           |
@@ -210,40 +210,40 @@ alto =  \relative c' {
 
 tenor =  \relative c' {
   \global
-  \partial 4  a4     | % 1
-  a2  a4  bf4        | % 2
-  a2. r8  d8         | % 3
+  \partial 4  a4     |
+  a2  a4  bf4        |
+  a2. r8  d8         |
   e4( cs4 d4) e4     |
-  f2  e2             | % 4
+  f2  e2             |
   d2. s4             \bar "|."
 
-  a2  a4  a4         | % 7
-  a2( d2)            | % 8
+  a2  a4  a4         |
+  a2( d2)            |
   d1                 \bar "|."
 
   bf2 a4  a4         |
 
   \time 3/4
-  a2  g4             | % 11
-  f8( a8  a4) a4     | % 12
+  a2  g4             |
+  f8( a8  a4) a4     |
   a2.                \bar "|."
 
-  a2   a4            | % 14
-  bf4( a4)    a4     | % 15
-  a2.                | % 16
-  a2   a4            | % 17
-  a2   cs4           | % 18
-  d2   d4            | % 19
+  a2   a4            |
+  bf4( a4)    a4     |
+  a2.                |
+  a2   a4            |
+  a2   cs4           |
+  d2   d4            |
   bf2  bf4           |
-  g2   g4            | % 21
-  a2   a4            | % 22
-  a2.                | % 23
-  a2   r4            | % 24
-  r2   s4            | % 25
-  r2   s4            | % 26
-  r2   s4            | % 28
+  g2   g4            |
+  a2   a4            |
+  a2.                |
+  a2   r4            |
   r2   s4            |
-  bf4  a4    a4      | % 29
+  r2   s4            |
+  r2   s4            |
+  r2   s4            |
+  bf4  a4    a4      |
   a4(  d4 cs4 bf8 a8)|
   a1                 \bar "|." \break
 
@@ -252,13 +252,13 @@ tenor =  \relative c' {
   r2  s4             |
   r2  s4             |
 
-  a4  g4  a4  bf4    | % 34
-  bf4 bf4 a2         | % 35
+  a4  g4  a4  bf4    |
+  bf4 bf4 a2         |
   bf2  a2            |
 
-  d4  cs4  d4        | % 36
+  d4  cs4  d4        |
   e2.(               |
-  e4) r4   a,4       | % 38
+  e4) r4   a,4       |
 
   a2  g4             |
   f2  e4             |
@@ -290,39 +290,39 @@ tenor =  \relative c' {
 
 bass =  \relative c {
   \global
-  \partial 4     d4  | % 1
-  d4.(  a8)  d4  d4  | % 2
-  d2. r8  s8         | % 3
+  \partial 4     d4  |
+  d4.(  a8)  d4  d4  |
+  d2. r8  s8         |
   r1                 |
-  r1                 | % 5
+  r1                 |
   r1                 \bar "|."
 
-  d2  a'4 g4         | % 7
-  f4( e4  d2)        | % 8
+  d2  a'4 g4         |
+  f4( e4  d2)        |
   d1                 \bar "|."
 
   g,2  a4 c4         |
   \time 3/4
-  d2  bf4            | % 11
-  a4( cs4)  d4       | % 12
+  d2  bf4            |
+  a4( cs4)  d4       |
   a2.                \bar "|."
 
-  a4( e'4) f4        | % 14
-  g4( f4)  e4        | % 15
-  d2.                | % 16
-  a4( a'4)  g4       | % 17
-  f2  e4             | % 18
-  d2  d4             | % 19
+  a4( e'4) f4        |
+  g4( f4)  e4        |
+  d2.                |
+  a4( a'4)  g4       |
+  f2  e4             |
+  d2  d4             |
   g,2  g4            |
-  c2   c4            | % 21
-  cs2 cs4            | % 22
-  d2(  a4)           | % 23
-  d2   r4            | % 28
+  c2   c4            |
+  cs2 cs4            |
+  d2(  a4)           |
+  d2   r4            |
   r2   s4            |
   r2   s4            |
   r2   s4            |
   r2   s4            |
-  g4   f4  e4        | % 29
+  g4   f4  e4        |
 
   \time 4/4
   d1                 |
@@ -334,15 +334,15 @@ bass =  \relative c {
   r2  s4             |
 
   \time 4/4
-  f4  e4  f4  d4     | % 35
-  d4  d4  <a e'>2    | % 36
+  f4  e4  f4  d4     |
+  d4  d4  <a e'>2    |
   g'2 f2             |
 
   \time 3/4
-  bf4 a4 bf4         | % 39
+  bf4 a4 bf4         |
   <a cs>2.(          |
   <a c>4)  r4  a4    |
-  a2  g4             | % 41
+  a2  g4             |
   f2( e4)            |
   d2.                |
   d2.                |
